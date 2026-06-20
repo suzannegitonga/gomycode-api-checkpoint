@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# User List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application that fetches and displays a list of users from a public API. The app demonstrates React hooks, asynchronous data fetching with `axios`, and responsive UI rendering using a component-based structure.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- Fetches user data from `https://jsonplaceholder.typicode.com/users`
+- Displays user cards with:
+  - Name
+  - Username
+  - Email
+  - Company name
+- Shows a loading indicator while data is being loaded
+- Includes error handling for failed API requests
+- Built with React, Axios, and CSS
 
-### `npm start`
+## 📁 Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `src/App.js` — Root component that renders the `UserList` component.
+- `src/UserList.jsx` — Main component for fetching and displaying users.
+- `src/UserList.css` — Styles for the user list and user cards.
+- `src/App.css` — Global app styling.
+- `src/index.js` — React application entry point.
+- `package.json` — Project metadata, dependencies, and scripts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v16+ recommended)
+- npm
 
-### `npm run build`
+### Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open a terminal in the project folder and run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Run locally
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Then open `http://localhost:3000` in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Available Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `npm start` — Run the app in development mode.
+- `npm test` — Launch the test runner.
+- `npm run build` — Build the app for production.
+- `npm run eject` — Eject Create React App configuration.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧠 How It Works
 
-## Learn More
+The `UserList` component uses React hooks:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `useState` to store users and loading state
+- `useEffect` to fetch data when the component mounts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+It uses `axios` to request user data from the JSONPlaceholder API and renders a list of user cards once the data is loaded.
 
-### Code Splitting
+## 💡 Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The app currently uses a demo API and is suitable for learning and prototyping.
+- If the API request fails, an error message is logged to the browser console.
+- The app can be extended with search, filtering, pagination, or detail views.
 
-### Analyzing the Bundle Size
+## 📦 Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `react`
+- `react-dom`
+- `react-scripts`
+- `axios`
+- `@testing-library/react`
+- `@testing-library/jest-dom`
+- `@testing-library/user-event`
+- `web-vitals`
 
-### Making a Progressive Web App
+## 📚 Learn More
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This app was created with Create React App. For more information on React:
 
-### Advanced Configuration
+- https://reactjs.org/
+- https://create-react-app.dev/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and free to use.
